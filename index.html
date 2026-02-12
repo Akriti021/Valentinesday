@@ -4,68 +4,94 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Rishabh ❤️</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Rishabh ❤️</title>
 
 <!-- Romantic Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, #ffe6e6, #fff5f5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  text-align: center;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(to bottom, #ffe6ec, #fff5f7);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    color: rgba(255, 105, 135, 0.4);
+    font-size: 14px;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
 }
 
 .container {
-  padding: 25px;
-  max-width: 420px;
+    padding: 25px;
+    max-width: 500px;
 }
 
 h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3em;
-  color: #d6336c;
-  margin-bottom: 10px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #d6336c;
+    margin-bottom: 10px;
 }
 
 p {
-  color: #555;
-  font-size: 1.05em;
-  line-height: 1.6;
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.05em;
 }
 
 button {
-  padding: 12px 25px;
-  font-size: 16px;
-  border: none;
-  border-radius: 25px;
-  margin: 10px;
-  cursor: pointer;
-  transition: 0.3s;
+    padding: 12px 28px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    margin: 12px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 #yesBtn {
-  background: #ff4d6d;
-  color: white;
+    background: #ff4d6d;
+    color: white;
+}
+
+#yesBtn:hover {
+    background: #ff3355;
 }
 
 #noBtn {
-  background: #ddd;
-  position: relative;
+    background: #ddd;
+    position: relative;
 }
 
 .popup {
-  display: none;
-  font-size: 1.4em;
-  color: #d6336c;
-  margin-top: 20px;
-  font-family: 'Great Vibes', cursive;
+    display: none;
+    margin-top: 25px;
+    font-size: 1.4em;
+    color: #d6336c;
+    font-family: 'Great Vibes', cursive;
 }
 </style>
 </head>
@@ -73,63 +99,56 @@ button {
 <body>
 
 <div class="container">
-  <h1>Rishabh, will you be my Valentine? ❤️</h1>
+    <h1>Rishabh, will you be my Valentine? ❤️</h1>
+    <p>
+        You are my calm in every storm,  
+        my favorite person to laugh with,  
+        and the place where my heart feels at home.  
+        <br><br>
+        Every memory with you feels softer, warmer, and brighter.
+    </p>
 
-  <p>
-    You’re my moon, my comfort, and my favorite person.  
-    From our Landour trip to every silly laugh we share,  
-    life just feels softer and warmer with you in it.  
-    <br><br>
-    Watching you chase your football dreams,  
-    loving Bailey together, and building our little world  
-    one memory at a time…  
-    <br><br>
-    I wouldn’t want to do this life with anyone else. ❤️
-  </p>
+    <button id="yesBtn">Yes ❤️</button>
+    <button id="noBtn">No 🙈</button>
 
-  <button id="yesBtn">Yes ❤️</button>
-  <button id="noBtn">No 🙈</button>
-
-  <div class="popup" id="popup">
-    Yay! Happy first Valentine’s Day, my love.  
-    <br>Landour, Bailey, and all our laughs—forever with you. ❤️
-  </div>
-
-  <div style="margin-top:40px;">
-    <h2 style="color:#d6336c;">Our Memories ❤️</h2>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center;">
-      <img src="photo1.jpg" width="140" style="margin:6px; border-radius:15px;">
-      <img src="photo2.jpg" width="140" style="margin:6px; border-radius:15px;">
-      <img src="photo3.jpg" width="140" style="margin:6px; border-radius:15px;">
-      <img src="photo4.jpg" width="140" style="margin:6px; border-radius:15px;">
-      <img src="photo5.jpg" width="140" style="margin:6px; border-radius:15px;">
+    <div class="popup" id="popup">
+        Yay! Happy Valentine’s Day, my love.  
+        Every day with you feels like magic. ❤️
     </div>
-  </div>
 </div>
 
-<audio id="bgMusic" loop>
-  <source src="song.mp3" type="audio/mpeg">
-</audio>
-
-<button
-  onclick="document.getElementById('bgMusic').play()"
-  style="position:fixed; bottom:20px; right:20px;
-  padding:10px 15px; border-radius:20px;
-  background:#ff4d6d; color:white; border:none;">
-  Play our song 🎵
-</button>
-
 <script>
+// Moving "No" button
 const noBtn = document.getElementById("noBtn");
 noBtn.addEventListener("mouseover", () => {
-  const x = Math.random() * 250 - 125;
-  const y = Math.random() * 250 - 125;
-  noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    const x = Math.random() * 250 - 125;
+    const y = Math.random() * 250 - 125;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
 
+// Yes button popup
 document.getElementById("yesBtn").onclick = () => {
-  document.getElementById("popup").style.display = "block";
+    document.getElementById("popup").style.display = "block";
 };
+
+// Create floating hearts
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerText = "♥";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (6 + Math.random() * 6) + "s";
+    heart.style.fontSize = (10 + Math.random() * 10) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 12000);
+}
+
+setInterval(createHeart, 500);
 </script>
 
 </body>
